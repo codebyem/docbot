@@ -1,8 +1,12 @@
 import os
 import re
+import sys
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
 from huggingface_hub import InferenceClient
-from core.extract_info import extract_appointment_info
-from core.email_sender import send_appointment_email
+from extract_info import extract_appointment_info
+from email_sender import send_appointment_email
 
 HF_MODEL = "meta-llama/Llama-3.2-3B-Instruct"
 

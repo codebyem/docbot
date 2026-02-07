@@ -1,6 +1,6 @@
 import ollama
-from core.extract_info import extract_appointment_info
-from core.email_sender import send_appointment_email
+from extract_info import extract_appointment_info
+from email_sender import send_appointment_email
 import re
 
 SYSTEM_PROMPT = """
